@@ -16,7 +16,7 @@ def onClick_Button():
     print("widget.height() = %d" % widget.height()) #240  工作区高度
 
     print("2")
-    print("widget.geometry().x() = %d" % widget.geometry().x())  #250  工作区横坐标
+    print("widget.geometry().x() = %d" % widget.geometry().x())  #251  工作区横坐标
     print("widget.geometry().y() = %d" % widget.geometry().y())  #231  工作区纵坐标
     print("widget.geometry().width() = %d" % widget.geometry().width()) #300 工作区宽度
     print("widget.geometry().height() = %d" % widget.geometry().height())  #240  工作区高度

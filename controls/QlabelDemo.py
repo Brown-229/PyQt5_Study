@@ -44,10 +44,11 @@ class QLabelDemo(QWidget):
         label3.setAlignment(Qt.AlignCenter)
         label3.setToolTip('这是一个图片标签')
         label3.setPixmap(QPixmap("./images/python.jpg"))
+        #设置为True时打开链接
         label4.setOpenExternalLinks(True)
         label4.setText(("<a href='https://item.jd.com/12417265.html'>感谢关注《Python从菜鸟到高手》</a>"))
         label4.setAlignment(Qt.AlignRight)
-        label4.setToolTip('这是一个超级链接')
+        label4.setToolTip('这是一个超链接')
         #设置垂直布局
         vbox = QVBoxLayout()
         vbox.addWidget(label1)
