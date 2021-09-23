@@ -4,6 +4,7 @@
 # @File : QLabelBuddy
 '''
 Qlabel与伙伴控制
+mainlayout.addWidget(控件对象，rowIndex,columeIndex,row,colume)
 '''
 from PyQt5.QtWidgets import *
 import sys
