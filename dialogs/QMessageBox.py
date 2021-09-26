@@ -19,17 +19,14 @@ import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-
-class QMessageBox(QWidget):
+class QMessageBoxDemo(QWidget):
     def __init__(self):
-        super(QMessageBox, self).__init__()
+        super(QMessageBoxDemo,self).__init__()
         self.initUI()
-
-
     def initUI(self):
         self.setWindowTitle('QMessageBox案例')
         self.resize(300,400)
-        #垂直布局
+
         layout = QVBoxLayout()
         self.button1 = QPushButton()
         self.button1.setText('显示关于对话框')
@@ -43,6 +40,7 @@ class QMessageBox(QWidget):
         self.button3.setText('显示警告对话框')
         self.button3.clicked.connect(self.showDialog)
 
+
         self.button4 = QPushButton()
         self.button4.setText('显示错误对话框')
         self.button4.clicked.connect(self.showDialog)
@@ -50,6 +48,7 @@ class QMessageBox(QWidget):
         self.button5 = QPushButton()
         self.button5.setText('显示提问对话框')
         self.button5.clicked.connect(self.showDialog)
+
 
         layout.addWidget(self.button1)
         layout.addWidget(self.button2)
@@ -63,18 +62,17 @@ class QMessageBox(QWidget):
         if text == '显示关于对话框':
             QMessageBox.about(self,'关于','这是一个关于对话框')
         elif text == '显示消息对话框':
-            reply = QMessageBox.information(self,'消息','这是一个消息对话框',QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+            reply = QMessageBox.information(self,'消息','这是一个消息对话框', QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
             print(reply == QMessageBox.Yes)
-        elif text =='显示警告对话框':
-            QMessageBox.warning(self,'警告','这是一个警告对话框',QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes )
+        elif text == '显示警告对话框':
+            QMessageBox.warning(self,'警告','这是一个警告对话框',QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
         elif text == '显示错误对话框':
-            QMessageBox.critical(self, '警告', '这是一个警告对话框', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+            QMessageBox.critical(self,'警告','这是一个警告对话框',QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
         elif text == '显示提问对话框':
-            QMessageBox.question(self, '警告', '这是一个警告对话框', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
-
+            QMessageBox.question(self,'警告','这是一个警告对话框',QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    main = QMessageBox()
+    main = QMessageBoxDemo()
     main.show()
     sys.exit(app.exec_())
