@@ -16,6 +16,7 @@ class QColorDialogDemo(QWidget):
 
     def initUI(self):
         self.setWindowTitle('Color Dialog例子')
+        self.resize(300,200)
         layout = QVBoxLayout()
         self.colorButton = QPushButton('设置颜色')
         self.colorButton.clicked.connect(self.getColor)
