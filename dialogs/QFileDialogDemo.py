@@ -40,7 +40,9 @@ class QFileDialogDemo(QWidget):
 
     def loadText(self):
         dialog = QFileDialog()
+        #设置打开文件模式，可以打开任意文件
         dialog.setFileMode(QFileDialog.AnyFile)
+        #选择文件
         dialog.setFilter(QDir.Files)
 
         if dialog.exec():
